@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traffic Navigation System</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&callback=initMap
+"
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+      <div class="container">
+      <h1>Traffic Navigation System</h1>
+      <label for="source">Source:</label>
+      <select id="source">
+        <option value="Coimbatore">Coimbatore</option>
+        <option value="Erode">Erode</option>
+        <option value="Tirupattur">Tirupattur</option>
+        <option value="Salem">Salem</option>
+        <option value="Trichy">Trichy</option>
+        <option value="Mayiladuthurai">Mayiladuthurai</option>
+      </select>
+
+      <label for="destination">Destination:</label>
+      <select id="destination">
+        <option value="Coimbatore">Coimbatore</option>
+        <option value="Erode">Erode</option>
+        <option value="Tirupattur">Tirupattur</option>
+        <option value="Salem">Salem</option>
+        <option value="Trichy">Trichy</option>
+        <option value="Mayiladuthurai">Mayiladuthurai</option>
+      </select>
+
+      <button onclick="findPath()">Find Path</button>
+      <h2>Shortest Path:</h2>
+      <p id="result"></p>
+    </div>
+
+    <!-- Google Map -->
+    <div id="map"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
